@@ -9,7 +9,12 @@ def map(source_array)
   return  new
 end
 
-def reduce 
- 
- 
- p map([2,4,6,1]){|i| i*i}
+def reduce(source_array, starting_point=true)
+  i = 0
+  j = starting_point
+  while i<source_array.size do
+    j= yield(i,j)
+    i += 1
+  end
+  return j
+end  
