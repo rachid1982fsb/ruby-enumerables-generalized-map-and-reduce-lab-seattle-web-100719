@@ -9,7 +9,7 @@ def map(source_array)
   return  new
 end
 
-#def reduce 
+def reduce 
  
  
  p map([2,4,6,1]){|i| i*i}
